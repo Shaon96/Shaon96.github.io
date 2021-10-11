@@ -1,0 +1,48 @@
+.experience-body {
+    margin-top: 20vh;
+    margin-left: 5vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.185);
+    border-radius: 20%;
+    margin-right: 5vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.company-logo {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 10%;
+    border-color: black;
+    border-width: 4px;
+    border-style: solid;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.432);
+}
+
+.tech {
+    height: 12vw;
+    width: 12vw;
+}
+
+
+/* .experience-table {
+    border-color: black;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.experience-table tr {
+    border-color: black;
+    border-width: 4px;
+    border-style: solid;
+} */
+
+.experience-table td {
+    /* border-color: black;
+    border-width: 4px;
+    border-style: solid; */
+    vertical-align: top;
+    padding-left: 5vw;
+}
