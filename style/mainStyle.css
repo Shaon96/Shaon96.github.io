@@ -135,6 +135,7 @@ ul.nav-bar-drop-down {
 
 .align-center {
     margin-bottom: 10vh;
+    margin-right: auto;
 }
 
 @keyframes slideInFromLeft {

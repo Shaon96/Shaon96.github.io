@@ -1,6 +1,10 @@
 .education-body {
     margin-top: 20vh;
-    margin-left: 15vw;
+    margin-left: 10vw;
+}
+
+.acedemic-details {
+    margin-left: -0.25vw;
 }
 
 .institution-badge {
@@ -192,7 +196,7 @@
 
 .courses-body {
     margin-top: 20vh;
-    margin-left: 20vw;
+    margin-left: 5vw;
 }
 
 .skills {
