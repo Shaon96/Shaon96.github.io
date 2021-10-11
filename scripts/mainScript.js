@@ -8,43 +8,40 @@ const contentType = {
 
 
 function updateContent(selectedContentType) {
-    let selectedClassName;
+    let selectedClassName, selectedOption;
     switch (selectedContentType) {
         case contentType.HOME:
             selectedClassName = "home";
+            selectedOption = "home;"
             break;
         case contentType.ABOUT:
             selectedClassName = "about-body";
+            selectedOption = "about;"
             break;
         case contentType.EDUCATION:
             selectedClassName = "education-full-body";
+            selectedOption = "education;"
             break;
         case contentType.EXPERIENCE:
             selectedClassName = "experience-body";
-            break;
-        case contentType.PROJECT_PUBLICATION:
-            selectedClassName = "content/project.html";
+            selectedOption = "experience;"
             break;
     }
+
+    var selectElement = document.getElementById("nav-menu-drop");
+    selectElement.value = selectedOption;
 
     const contentClasses = ["home", "about-body", "education-full-body", "experience-body"];
 
     contentClasses.forEach((classNameItem) => {
-            if (classNameItem == selectedClassName) {
-                var selectedContent = document.getElementsByClassName(selectedClassName);
-                selectedContent[0].style.display = 'block';
-            } else {
-                var otherContent = document.getElementsByClassName(classNameItem);
-                otherContent[0].style.display = 'none';
-            }
-        })
-        // fetch(contentPath)
-        //     .then(response => response.text())
-        //     .then(data => {
-        //         var contentPaneDiv = document.getElementById("content-pane");
-        //         contentPaneDiv.innerHTML = data;
-        //         //console.log(data);
-        //     });
+        if (classNameItem == selectedClassName) {
+            var selectedContent = document.getElementsByClassName(selectedClassName);
+            selectedContent[0].style.display = 'block';
+        } else {
+            var otherContent = document.getElementsByClassName(classNameItem);
+            otherContent[0].style.display = 'none';
+        }
+    })
 }
 
 /**
