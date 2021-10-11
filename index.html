@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="style/mainStyle.css" rel="stylesheet" type="text/css" />
+    <link href="style/home.css" rel="stylesheet" type="text/css" />
+    <link href="style/about.css" rel="stylesheet" type="text/css" />
+    <link href="style/education.css" rel="stylesheet" type="text/css" />
+    <link href="style/experience.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/mainScript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body onload="onPageLoad()">
+    <div id="root">
+        <div id="nav-bar">
+            <div>
+            </div>
+            <ul id="nav-bar-full-menu" class="nav-bar-list">
+                <li><button class="nav-bar-item" onclick="loadProject()">Project & Publications</button></li>
+                <li><button class="nav-bar-item" onclick="loadExperience()">Experience</button></li>
+                <li><button class="nav-bar-item" onclick="loadEducation()">Education</button></li>
+                <li><button class="nav-bar-item" onclick="loadAbout()">About</button></li>
+                <li><button class="nav-bar-item" onclick="loadHome()">Home</button></li>
+                <span class='date-time-display'></span>
+            </ul>
+            <ul class="nav-bar-drop-down">
+                <li class="date-time"><span class='date-time-display'></span></li>
+                <li class="nav-menu-list-item-drop"><select id="nav-menu-drop" onchange="optionChanged()">
+                <option value="home"><button class="nav-bar-item" onclick="loadHome()">Home</button></option>
+                <option value="about"><button class="nav-bar-item" onclick="loadAbout()">About</button></option>
+                <option value="education"><button class="nav-bar-item" onclick="loadEducation()">Education</button></option>
+                <option value="experience" ><button class="nav-bar-item" onclick="loadExperience()">Experience</button></option>
+                <option value="project"><button class="nav-bar-item" onclick="loadProject()">Project & Publications</button></option>
+            </select></li>
+            </ul>
+        </div>
+        <div id="content-pane">
+            <div class="home">
+                <div class="home-body-bigger-screen">
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="profile-pic-box">
+                                    <img src="images/profile-picture.jpg" class="rounded-image" />
+                                </div>
+                            </td>
+                            <td>
+                                <div id="name-box">
+                                    <p id="home-first-name">SHAON</p>
+                                    <p id="home-last-name">DASGUPTA</p>
+                                    <div id="name-underline-small"></div>
+                                </div>
+                                <p class="main-subheading">MTech Student at IIIT, Hyderabad</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="pofessional-social-media-box">
+                                    <ul class="horizontal">
+                                        <li>
+                                            <a href="https://dblp.org/pid/249/3089.html" target="_blank"><img title="DBLP Profile" src="images/icons/dblp.png" class="small-icon" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/Shaon96" target="_blank"><img title="Github Profile" src="images/icons/853360_github_icon.png" class="small-icon" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/shaon-dasgupta/" target="_blank"><img title="LinkedIn Profile" src="images/icons/in.svg" class="small-icon" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:dasgupta.shaon@gmail.com" target="_blank"><img title="email" src="images/icons/gmail.svg" class="small-icon" /></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="horizontal">
+                                <div id="info-links">
+                                    <ul class="horizontal">
+                                        <li>
+                                            <a href="content/data/Resume-Shaon_Dasgupta.pdf" target="_blank">
+                                                <div class="small-icon-text">
+                                                    <img title="Resume" src="images/icons/resume.png" class="small-icon" />
+                                                    <p>Resume</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="loadEducation()">
+                                                <div class="small-icon-text">
+                                                    <img title="Certifications" src="images/icons/certifications.png" class="small-icon" />
+                                                    <p>Certifications</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="loadExperience()">
+                                                <div class="small-icon-text">
+                                                    <img title="Skills" src="images/icons/skills.png" class="small-icon" />
+                                                    <p>Skills</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="home-body-smaller-screen">
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="profile-pic-box-small">
+                                    <img src="images/profile-picture.jpg" class="rounded-image" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="small-name-box">
+                                    <p id="home-name-small">SHAON DASGUPTA</p>
+                                    <div id="name-underline-small"></div>
+                                </div>
+                                <p class="main-subheading-small">MTech Student at IIIT, Hyderabad</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="professional-social-media-box-small">
+                                    <ul class="horizontal">
+                                        <li>
+                                            <a href="https://dblp.org/pid/249/3089.html" target="_blank"><img title="DBLP Profile" src="images/icons/dblp.png" class="small-icon" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/Shaon96" target="_blank"><img title="Github Profile" src="images/icons/853360_github_icon.png" class="small-icon" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/shaon-dasgupta/" target="_blank"><img title="LinkedIn Profile" src="images/icons/in.svg" class="small-icon" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:dasgupta.shaon@gmail.com" target="_blank"><img title="email" src="images/icons/gmail.svg" class="small-icon" /></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="horizontal">
+                                <div id="info-links">
+                                    <ul class="horizontal">
+                                        <li>
+                                            <a href="content/data/Resume-Shaon_Dasgupta.pdf" target="_blank">
+                                                <div class="small-icon-text">
+                                                    <img title="Resume" src="images/icons/resume.png" class="small-icon" />
+                                                    <p>Resume</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="loadEducation()" target="_blank">
+                                                <div class="small-icon-text">
+                                                    <img title="Certifications" src="images/icons/certifications.png" class="small-icon" />
+                                                    <p>Certifications</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="loadExperience()">
+                                                <div class="small-icon-text">
+                                                    <img title="Skills" src="images/icons/skills.png" class="small-icon" />
+                                                    <p>Skills</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="about-body">
+                <div class="transparent-white-background">
+                    <div class="about-div">
+                        <div id="profile-pic-box-about">
+                            <img src="images/profile-picture.jpg" class="rounded-image" />
+                        </div>
+                    </div>
+                    <div class="about-div about-para">
+                        <p>Hi! I am Shaon. I am a Software Engineer currently pursuing MTech in Computer Science and Engineering from <span class="link"><a href="https://www.iiit.ac.in/" target="_blank">IIIT, Hyderabad</a></span>.</p>
+                        <div class="center-div"><img class="about-images" src="images/about/iiitH.jpg" /></div>
+                        <p> I love to code and am passionate about continuosly learning and upgrading my skills. I also love music, playing badminton and travelling!</p>
+                        <p>
+                            I grew up in the city of <span class="link"><a href="https://en.wikipedia.org/wiki/Kolkata" target="_blank">Kolkata</a></span>, India where I have completed my schooling, graduation and also gathered some experience as a professional
+                            developer.
+                        </p>
+                        <div class="center-div">
+                            <figure>
+                                <img title="City of Kolkata" class="about-images" src="images/about/kolkata.jpg" />
+                                <figcaption class="caption">City of Kolkata</figcaption>
+                            </figure>
+                        </div>
+                        <p>
+                            I did my schooling from <span class="link"><a href="https://www.stssalumni.co.in/" target="_blank">St. Teresa's Secondary School</a></span> after which I went on to complete my Bachelors Degree in Computer Science and Engineering
+                            from
+                            <span class="link"><a href="https://stcet.org/" target="_blank"> St. Thomas' College of Engineering and Technology</a></span>.
+                        </p>
+                        <div class="center-div">
+                            <figure>
+                                <img title="St. Teresa's Secondary School" class="about-images" src="images/about/school.jpg">
+                                <figcaption class="caption">St. Teresa's Secondary School</figcaption>
+                            </figure>
+                            <figure>
+                                <img class="about-images" title="St. Thomas' College of Engineering and Technology" src="images/about/St_Thomas_College_of_Engineering_and_Technology_Kolkata.jpg" />
+                                <figcaption class="caption">St. Thomas' College of Engineering and Technology</figcaption>
+                            </figure>
+                        </div>
+                        <P>
+                            During my Bachelors, I have worked on some projects including Design of an Efficient Comparison Free Hardware Sorter, Software Management System projects like Inventory Management System using web development technologies. We were also able to publish
+                            a paper on the <span class="link"><a href="https://ieeexplore.ieee.org/abstract/document/8839318" target="_blank">Compare-Free hardware sorter design in IEEE VLSI Symposium 2019</a></span>.
+                        </p>
+                        <p>
+                            While pursuing my bachelors, I had also gotten the oppurtunity to take part in Smart India Hackathon and Bengalathon where we had worked on designing a chat bot to help tourists find cost effective packages.
+                        </p>
+                        <p>
+                            After my Bachelors Degree, I started working in <span class="link"><a href="https://www.bentley.com/en" target="_blank">Bentley Systems</a></span> as an Associate Software Engineer and then Software Engineer 1.
+                        </p>
+                        <div class="center-div">
+                            <figure>
+                                <img title="City of Kolkata" class="about-images" src="images/about/Bentley-Systems.jpg" />
+                                <figcaption class="caption">Bentley Systems</figcaption>
+                            </figure>
+                        </div>
+                        <p>During my work experience, I had gathered knowledge on various technologies including React.js, Typescript, C#, .Net, C++ and design principles related to both Web and Desktop Development and had also got the chance with multiple
+                            teams on 5 different projects some of which were related to Digital Twins.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="education-full-body">
+                <div class="education-body" id="academic-details">
+                    <h2 class="main-subheading align-center">Academic Details</h2>
+                    <!-- <div class="full-line end"></div> -->
+                    <!-- <ul class="no-decoration-list">
+                        <li>
+                            <div class="education-entry-4">
+                                <table> -->
+                    <table>
+                        <tr class="education-entry-4">
+                            <td class="top-border-white">
+                                <span class="date-interval">2021 - 2023</span>
+                            </td>
+                            <td class="left-border-white">
+                                <div class="small-circle"></div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img class="institution-badge" src="images/education/IIITH.png" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="institution-name">
+                                    International Institute of Information Technology, Hyderabad
+                                </div>
+                                <div class="degree">
+                                    Mtech, Computer Science and Engineering
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- </table>
+                            </div>
+                        </li> -->
+                        <!-- <li>
+                            <div class="education-entry-3">
+                                <table> -->
+                        <tr class="education-entry-3">
+                            <td>
+                                <span class="date-interval">2014 - 2018</span>
+                            </td>
+                            <td class="left-border-white">
+                                <!-- <div class="middle-line"></div> -->
+
+                                <div class="small-circle"></div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img class="institution-badge" src="images/education/STCET.png" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="institution-name">
+                                    St. Thomas' College of Engineering and Technology
+                                </div>
+                                <div class="degree">
+                                    Btech, Computer Science and Engineering
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- </table>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education-entry-2">
+                                <table> -->
+                        <tr class="education-entry-2">
+                            <td>
+                                <span class="date-interval">2012 - 2014</span>
+                            </td>
+                            <td class="left-border-white">
+                                <!-- <div class="middle-line"> </div> -->
+
+                                <div class="small-circle"></div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img class="institution-badge" src="images/education/STSS.png" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="institution-name">
+                                    St. Teresa's Secondary School
+                                </div>
+                                <div class="degree">
+                                    Indian School Cerificate (ISC), Science
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- </table>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education-entry-1">
+                                <table> -->
+                        <tr class="education-entry-1">
+                            <td class="bottom-border-white">
+                                <span class="date-interval">1999 - 2012</span>
+                            </td>
+                            <td class="left-border-white">
+                                <!-- <div class="middle-line end"></div> -->
+
+                                <div class="small-circle"></div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img class="institution-badge" src="images/education/STSS.png" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="institution-name">
+                                    St. Teresa's Secondary School
+                                </div>
+                                <div class="degree">
+                                    Indian Certificate of Secondary Education (ICSE)
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- </table>
+                </div>
+                </li>
+                </ul> -->
+                </div>
+                <div class="courses-body" id="courses">
+                    <h2 class="main-subheading align-center">Trainings and Certifications</h2>
+                    <ul>
+                        <li><img class="cert-badge" src="images/education/AZ-900.png" /><span class="cert-title">Microsoft Azure Fundamentals: AZ-900</span></li>
+                        <li><img class="cert-badge" src="images/education/Python.png" /><span class="cert-title">Python Programming: Microsoft Approved Course By Microsoft IT Avademy</span></li>
+                        <li><img class="cert-badge" src="images/education/Html-css.png" /><span class="cert-title">Web Designing [HTML & CSS] By Microsoft Imagine Academy.</span></li>
+                        <li><img class="cert-badge" src="images/education/R.png" /><span class="cert-title">Industrial Training on R Programming In Context With Machine Learning.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-body">
+                <table class="experience-table">
+                    <tr>
+                        <td rowspan="2">
+                            <img class="company-logo" src="images/experience/bentley_logo.jpg" />
+                        </td>
+                        <td>
+                            <div>
+                                <h2>Software Engineer 1</h2>
+                                <h4>Nov 2020 - Aug 2021</h4>
+                                <p>Had got the opportunity to work with the AssetWise Energy Infrastructure team on projects based on the iTwin.js platform. My work involved tasks related to development, deployment, and testing. Technologies used: React.js,
+                                    Typescript, Node.js, iModel.js, Electron, C#, .Net, Azure DevOps, Docker, Kubernetes, Mocha, Chai Sinon.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <h2>Associate Software Engineer</h2>
+                                <h4>Jun 2018 - Oct 2020</h4>
+                                <p>During the onboarding program, I had got the chance to work on four projects including STAAD.Pro, MicroStation, AssetWise Common Services, and PlantSight. During this time, I have worked on tasks related to the development
+                                    and testing of both web and desktop-based applications involving technologies like React.js, Redux, Typescript, Node.js, Javascript, HTML, CSS, C#, .NET Core, WPF, and C++. Also, the training and the project work helped
+                                    me gain knowledge in using S.O.L.I.D. principles, Design Patterns and other best practices during development.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="skills">
+                                <h3>Skills And Technologies Used</h3>
+                                <table>
+                                    <tr>
+                                        <td><img class="tech" src="images/experience/reactjs.png" /></td>
+                                        <td><img class="tech" src="images/experience/typescript.png" /></td>
+                                        <td><img class="tech" src="images/experience/redux.png" /></td>
+                                        <td><img class="tech" src="images/experience/Nodejs.png" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="tech" src="images/experience/c-sharp.png" /></td>
+                                        <td><img class="tech" src="images/experience/net.png" /></td>
+                                        <td><img class="tech" src="images/experience/wpf.png" /></td>
+                                        <td><img class="tech" src="images/experience/c++.png" /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
