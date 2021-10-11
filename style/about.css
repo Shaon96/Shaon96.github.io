@@ -1,0 +1,127 @@
+.transparent-white-background {
+    margin-left: 15vw;
+    margin-right: 50vw;
+    width: 70vw;
+    margin-top: 10vh;
+    margin-top: 20vh;
+    background-color: rgba(255, 255, 255, 0.678);
+    border-radius: 10%;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.514);
+    display: block;
+}
+
+.transparent-white-background:hover {
+    margin-left: 15vw;
+    margin-right: 50vw;
+    width: 70vw;
+    margin-top: 10vh;
+    margin-top: 20vh;
+    background-color: white;
+    border-radius: 10%;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.514);
+    display: block;
+}
+
+#about-me-heading {
+    margin-top: 100px;
+    position: relative;
+}
+
+#profile-pic-box-about {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    width: 125px;
+    height: 125px;
+    position: relative;
+    overflow: hidden;
+    margin: 50px;
+    align-self: center;
+    border-radius: 50%;
+    border-color: white;
+    border-width: 20px;
+}
+
+.about-div {
+    display: inline;
+    float: left;
+}
+
+.about-para {
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+    width: 40vw;
+    margin-top: 25px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-color: black;
+    height: 90%;
+    font-family: cursive;
+}
+
+@media (max-width: 800px) {
+    .about-para {
+        animation: 1s ease-out 0s 1 slideInFromBottom;
+        width: 65vw;
+        margin-top: 2px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        scrollbar-color: black;
+        height: 60%;
+        padding-left: 2.5vw;
+        margin-right: auto;
+    }
+}
+
+.caption {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 9px;
+}
+
+.center-div {
+    width: 100%;
+}
+
+.about-images {
+    margin: 20px;
+    margin-left: 15%;
+    height: 50%;
+    width: 70%;
+    border-radius: 10%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.541);
+}
+
+.link {
+    color: rgba(94, 94, 255, 0.664);
+    font-weight: bolder;
+}
+
+
+/**SCROLL-BAR-STYLE**/
+
+::-webkit-scrollbar {
+    width: 1px;
+    margin: 5px;
+    padding: 5px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
