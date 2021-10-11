@@ -12,19 +12,19 @@ function updateContent(selectedContentType) {
     switch (selectedContentType) {
         case contentType.HOME:
             selectedClassName = "home";
-            selectedOption = "home;"
+            selectedOption = "home"
             break;
         case contentType.ABOUT:
             selectedClassName = "about-body";
-            selectedOption = "about;"
+            selectedOption = "about"
             break;
         case contentType.EDUCATION:
             selectedClassName = "education-full-body";
-            selectedOption = "education;"
+            selectedOption = "education"
             break;
         case contentType.EXPERIENCE:
             selectedClassName = "experience-body";
-            selectedOption = "experience;"
+            selectedOption = "experience"
             break;
     }
 
